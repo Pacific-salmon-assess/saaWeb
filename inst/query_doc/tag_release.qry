@@ -1,0 +1,20 @@
+{
+  "Id": 0,
+  "DataSource": "VW_RELEASES_C",
+  "Schema": "MRP_PUB",
+  "Fields": [
+    "RL_TAGCODE",
+    "RL_SPECIES_MRP_CODE",
+    "RL_SPECIES_MRP_NAME",
+     "RL_NUM_REL_TOTAL",
+    "RL_PCT_TAGGED"
+  ],
+  "Filters": [
+    {
+      "Column": "RL_TAGCODE",
+      "Value": "180112,180101"
+    }
+  ],
+  "Orders": [],
+  "Aggregates": []
+}
