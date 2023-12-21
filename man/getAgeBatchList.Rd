@@ -16,16 +16,15 @@ getAgeBatchList(
 \item{user_name}{User name to execute the query as}
 
 \item{password}{Password of the user}
-
-\item{years}{Years to retrieve}
 }
 \value{
 Results of the Query
 }
 \description{
-Get Age Batch List
+Retrieve header information on all age batches
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 getAgeBatchList()
-
+\dontshow{\}) # examplesIf}
 }

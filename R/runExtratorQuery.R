@@ -41,6 +41,8 @@ parseExtractorResponse <- function(query_response) {
 #' Run Extractor Query
 #'
 #' @param query_doc JSON Query file name or text
+#' @param extractor_usage_url URL for extractor login usage page
+#' @param extractor_query_url URL to run extractor queries
 #' @param user_name User name to execute the query as
 #' @param password Password of the user
 #'
@@ -51,7 +53,7 @@ parseExtractorResponse <- function(query_response) {
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #'
-#' @examples
+#' @examplesIf interactive()
 #' example_query_file <- system.file("query_doc", "tag_release.qry", package = "saaWeb")
 #' runExtractorQuery(example_query_file)
 #'

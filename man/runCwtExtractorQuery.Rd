@@ -27,7 +27,8 @@ Results of the Query
 Run CWT Extractor Query
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 example_query_file <- system.file("query_doc", "tag_release.qry", package = "saaWeb")
 runCwtExtractorQuery(example_query_file)
-
+\dontshow{\}) # examplesIf}
 }

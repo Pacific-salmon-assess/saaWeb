@@ -1,6 +1,8 @@
-#' Get Age Batch List
+#' Get Age Batch Details
 #'
-#' @param years Years to retrieve
+#' Retrieve the details for the specific age batches
+#'
+#' @param batch_ids Batch IDs
 #' @param config_file Configuration file
 #' @param user_name User name to execute the query as
 #' @param password Password of the user
@@ -12,14 +14,14 @@
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #'
-#' @examples
+#' @examplesIf interactive()
 #' AgeBatchDetail(114105)
 #'
-getAgeBatchDetails <- function(batch_id,
+getAgeBatchDetails <- function(batch_ids,
                                config_file = "saaWeb.config",
                                user_name = Sys.getenv("username"),
                                password = NULL) {
-  if (allInteger(batch_id) == FALSE & length(batch_id) > 0) {
+  if (allInteger(batch_ids) == FALSE & length(batch_ids) > 0) {
     stop("Age Batch IDs must be integer values.")
   }
 
@@ -37,14 +39,16 @@ getAgeBatchDetails <- function(batch_id,
     stop("No URL provided for the AgeBatchDetail in the config file")
   }
 
-  batch_urls <- urlPath(age_batch_detail_url, batch_id)
+  batch_urls <- urlPath(age_batch_detail_url, batch_ids)
 
   query_response_list <-
     lapply(
-      batch_urls,
-      function(., web_conn) {
-        query_response <- curl::curl_fetch_memory(., web_conn)
-        cat(query_response$status_code, " - ", ., "\n")
+      batch_ids,
+      function(., web_conn, age_batch_detail_url) {
+        query_url <- urlPath(age_batch_detail_url, .)
+        cat("Retrieving batch ", ., " details\n")
+        query_response <- curl::curl_fetch_memory(query_url, web_conn)
+
         if (query_response$status_code != HttpStatusOk) {
           stop("Error when retrieving query result: ", query_response$status_code)
         }
@@ -56,7 +60,8 @@ getAgeBatchDetails <- function(batch_id,
         response_df <- jsonlite::fromJSON(response_content)
         return(response_df)
       },
-      web_conn
+      web_conn,
+      age_batch_detail_url
     )
   query_response_df <- do.call(rbind, query_response_list)
   return(query_response_df)

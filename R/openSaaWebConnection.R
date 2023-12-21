@@ -10,7 +10,7 @@
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #'
-#' @examples
+#' @examplesIf interactive()
 #' example_query_file <- system.file("query_doc", "tag_release.qry", package = "saaWeb")
 #' runCwtExtractorQuery(example_query_file)
 #'

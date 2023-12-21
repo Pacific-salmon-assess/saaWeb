@@ -1,4 +1,4 @@
-# saaWeb
+# Salmon Assessment Analytics Web
 
 ## Installation
 

@@ -19,9 +19,8 @@ Check that all values in a vector are integers
 }
 \examples{
 
-cetl:::allInteger(letters) # FALSE
-cetl:::allInteger(c("1","2","3","4","5","6","1000")) # TRUE
-cetl:::allInteger("3.14") # FALSE
-
+saaWeb:::allInteger(letters) # FALSE
+saaWeb:::allInteger(c("1", "2", "3", "4", "5", "6", "1000")) # TRUE
+saaWeb:::allInteger("3.14") # FALSE
 
 }

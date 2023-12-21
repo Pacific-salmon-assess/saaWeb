@@ -15,6 +15,10 @@ runExtractorQuery(
 \arguments{
 \item{query_doc}{JSON Query file name or text}
 
+\item{extractor_usage_url}{URL for extractor login usage page}
+
+\item{extractor_query_url}{URL to run extractor queries}
+
 \item{user_name}{User name to execute the query as}
 
 \item{password}{Password of the user}
@@ -26,7 +30,8 @@ Results of the Query
 Run Extractor Query
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 example_query_file <- system.file("query_doc", "tag_release.qry", package = "saaWeb")
 runExtractorQuery(example_query_file)
-
+\dontshow{\}) # examplesIf}
 }

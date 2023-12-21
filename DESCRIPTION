@@ -4,9 +4,8 @@ Title: Salmon Assessment Analytics Web Services
 Version: 1.0.0
 Authors@R: c(
     person(given = "Nicholas", family = "Komick", email = "nicholas.komick@dfo-mpo.gc.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8330-0863")))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: This package provides an R interface to retrieve data from various web services.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 

@@ -35,6 +35,8 @@ parseAgeScaleReads <- function(scale_read_df) {
 
 #' Get Age Batch Scale Results
 #'
+#' Retrieve the scale age results for the specific batches
+#'
 #' @param batch_ids Batch IDs to retrieve scale age results
 #' @param config_file Configuration file
 #' @param user_name User name to execute the query as
@@ -47,14 +49,14 @@ parseAgeScaleReads <- function(scale_read_df) {
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #'
-#' @examples
+#' @examplesIf interactive()
 #' getAgeBatchScaleResults(114105)
 #'
-getAgeBatchScaleResults <- function(batch_id,
+getAgeBatchScaleResults <- function(batch_ids,
                                     config_file = "saaWeb.config",
                                     user_name = Sys.getenv("username"),
                                     password = NULL) {
-  if (allInteger(batch_id) == FALSE & length(batch_id) > 0) {
+  if (allInteger(batch_ids) == FALSE & length(batch_ids) > 0) {
     stop("Age Batch IDs must be integer values.")
   }
 
@@ -73,7 +75,7 @@ getAgeBatchScaleResults <- function(batch_id,
   }
   query_response_list <-
     lapply(
-      batch_id,
+      batch_ids,
       function(., base_url, web_conn) {
         batch_url <- urlPath(base_url, .)
         query_response <- curl::curl_fetch_memory(batch_url, web_conn)

@@ -5,28 +5,29 @@
 \title{Get Age Batch Scale Results}
 \usage{
 getAgeBatchScaleResults(
-  batch_id,
+  batch_ids,
   config_file = "saaWeb.config",
   user_name = Sys.getenv("username"),
   password = NULL
 )
 }
 \arguments{
+\item{batch_ids}{Batch IDs to retrieve scale age results}
+
 \item{config_file}{Configuration file}
 
 \item{user_name}{User name to execute the query as}
 
 \item{password}{Password of the user}
-
-\item{batch_ids}{Batch IDs to retrieve scale age results}
 }
 \value{
 Results of the Query
 }
 \description{
-Get Age Batch Scale Results
+Retrieve the scale age results for the specific batches
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 getAgeBatchScaleResults(114105)
-
+\dontshow{\}) # examplesIf}
 }

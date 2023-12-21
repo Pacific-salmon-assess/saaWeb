@@ -1,6 +1,5 @@
 "%notin%" <- Negate("%in%")
 
-
 #' Load Configuration File
 #'
 #' @param config_file_name Configuration file name
@@ -14,7 +13,6 @@ loadConfigFile <- function(config_file_name) {
   config_list <- yaml::read_yaml(config_file_name)
   return(config_list)
 }
-
 
 #' Has Non-Zero Text Value
 #'
@@ -47,7 +45,6 @@ urlPath <- function(...) {
 #'
 #' Check that all values in a vector are integers
 #'
-#'
 #' @param x Values to check for integers
 #' @param ignore_na Ignore NA values
 #'
@@ -55,9 +52,9 @@ urlPath <- function(...) {
 #'
 #' @examples
 #'
-#' cetl:::allInteger(letters) # FALSE
-#' cetl:::allInteger(c("1", "2", "3", "4", "5", "6", "1000")) # TRUE
-#' cetl:::allInteger("3.14") # FALSE
+#' saaWeb:::allInteger(letters) # FALSE
+#' saaWeb:::allInteger(c("1", "2", "3", "4", "5", "6", "1000")) # TRUE
+#' saaWeb:::allInteger("3.14") # FALSE
 #'
 allInteger <- function(x, ignore_na = TRUE) {
   if (is.integer(x)) {

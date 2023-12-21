@@ -1,6 +1,7 @@
 #' Get Age Batch List
 #'
-#' @param years Years to retrieve
+#' Retrieve header information on all age batches
+#'
 #' @param config_file Configuration file
 #' @param user_name User name to execute the query as
 #' @param password Password of the user
@@ -12,7 +13,7 @@
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #'
-#' @examples
+#' @examplesIf interactive()
 #' getAgeBatchList()
 #'
 getAgeBatchList <- function(config_file = "saaWeb.config",

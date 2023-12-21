@@ -2,31 +2,32 @@
 % Please edit documentation in R/getAgeBatchDetails.R
 \name{getAgeBatchDetails}
 \alias{getAgeBatchDetails}
-\title{Get Age Batch List}
+\title{Get Age Batch Details}
 \usage{
 getAgeBatchDetails(
-  batch_id,
+  batch_ids,
   config_file = "saaWeb.config",
   user_name = Sys.getenv("username"),
   password = NULL
 )
 }
 \arguments{
+\item{batch_ids}{Batch IDs}
+
 \item{config_file}{Configuration file}
 
 \item{user_name}{User name to execute the query as}
 
 \item{password}{Password of the user}
-
-\item{years}{Years to retrieve}
 }
 \value{
 Results of the Query
 }
 \description{
-Get Age Batch List
+Retrieve the details for the specific age batches
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 AgeBatchDetail(114105)
-
+\dontshow{\}) # examplesIf}
 }
