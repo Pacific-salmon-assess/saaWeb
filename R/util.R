@@ -7,7 +7,7 @@
 #'
 #' @importFrom yaml read_yaml
 loadConfigFile <- function(config_file_name) {
-  if(file.exists(config_file_name) == FALSE) {
+  if (file.exists(config_file_name) == FALSE) {
     stop("You must have a \"saaWeb.config\" file. As Nicholas Komick about this config file.")
   }
 
@@ -26,7 +26,7 @@ loadConfigFile <- function(config_file_name) {
 #' @examples
 #' hasText(c(NA, "", "Salmon", "   "))
 hasText <- function(text) {
-  if(is.null(text)) {
+  if (is.null(text)) {
     return(FALSE)
   }
 
@@ -56,20 +56,19 @@ urlPath <- function(...) {
 #' @examples
 #'
 #' cetl:::allInteger(letters) # FALSE
-#' cetl:::allInteger(c("1","2","3","4","5","6","1000")) # TRUE
+#' cetl:::allInteger(c("1", "2", "3", "4", "5", "6", "1000")) # TRUE
 #' cetl:::allInteger("3.14") # FALSE
-#'
 #'
 allInteger <- function(x, ignore_na = TRUE) {
   if (is.integer(x)) {
-    return (TRUE)
+    return(TRUE)
   }
 
   result <- grepl("^[0-9]+$", x)
   if (ignore_na == TRUE) {
     result <- result | is.na(x)
   }
-  return (all(result))
+  return(all(result))
 }
 
 #' Get Current Year

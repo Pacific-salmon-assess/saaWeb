@@ -1,4 +1,3 @@
-
 #' Get Age Batch List
 #'
 #' @param years Years to retrieve
@@ -22,20 +21,22 @@ getAgeBatchList <- function(config_file = "saaWeb.config",
   config_list <- loadConfigFile(config_file)
 
   web_conn <-
-    openSaaWebConnection(config_list$AgeUsageUrl,
-                         user_name,
-                         password) |>
+    openSaaWebConnection(
+      config_list$AgeUsageUrl,
+      user_name,
+      password
+    ) |>
     curl::handle_setheaders(Accept = "application/json, text/plain, */*")
 
 
   query_response <- curl::curl_fetch_memory(config_list$AgeBatchList, web_conn)
 
-  if(query_response$status_code != HttpStatusOk) {
+  if (query_response$status_code != HttpStatusOk) {
     stop("Error when retrieving query result: ", query_response$status_code)
   }
 
   response_content <- query_response$content
-  if(is.raw(response_content)) {
+  if (is.raw(response_content)) {
     response_content <- rawToChar(response_content)
   }
 

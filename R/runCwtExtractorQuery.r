@@ -25,11 +25,13 @@ runCwtExtractorQuery <- function(query_doc,
   extractor_usage_url <- config_list$CwtExtractorUsageUrl
   extractor_query_url <- config_list$CwtExtractorQueryUrl
 
-  query_result <- runExtractorQuery(query_doc,
-                                    extractor_usage_url,
-                                    extractor_query_url,
-                                    user_name,
-                                    password)
+  query_result <- runExtractorQuery(
+    query_doc,
+    extractor_usage_url,
+    extractor_query_url,
+    user_name,
+    password
+  )
 
   return(query_result)
 }

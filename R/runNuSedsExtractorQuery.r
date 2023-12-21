@@ -21,11 +21,13 @@ runNusedsExtractorQuery <- function(query_doc,
   extractor_usage_url <- config_list$NusedsExtractorUsageUrl
   extractor_query_url <- config_list$NusedsExtractorQueryUrl
 
-  query_result <- runExtractorQuery(query_doc,
-                                    extractor_usage_url,
-                                    extractor_query_url,
-                                    user_name,
-                                    password)
+  query_result <- runExtractorQuery(
+    query_doc,
+    extractor_usage_url,
+    extractor_query_url,
+    user_name,
+    password
+  )
 
   return(query_result)
 }
