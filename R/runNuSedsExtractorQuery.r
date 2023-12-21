@@ -1,4 +1,4 @@
-#' Run CWT Extractor Query
+#' Run NuSEDs Extractor Query
 #'
 #' @param query_doc JSON Query file name or text
 #' @param config_file Configuration file for SAA Web Services
@@ -12,18 +12,14 @@
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #'
-#' @examples
-#' example_query_file <- system.file("query_doc", "tag_release.qry", package = "saaWeb")
-#' runCwtExtractorQuery(example_query_file)
-#'
-runCwtExtractorQuery <- function(query_doc,
-                                 config_file = "saaWeb.config",
-                                 user_name = Sys.getenv("username"),
-                                 password = NULL) {
+runNusedsExtractorQuery <- function(query_doc,
+                                    config_file = "saaWeb.config",
+                                    user_name = Sys.getenv("username"),
+                                    password = NULL) {
   config_list <- loadConfigFile(config_file)
 
-  extractor_usage_url <- config_list$CwtExtractorUsageUrl
-  extractor_query_url <- config_list$CwtExtractorQueryUrl
+  extractor_usage_url <- config_list$NusedsExtractorUsageUrl
+  extractor_query_url <- config_list$NusedsExtractorQueryUrl
 
   query_result <- runExtractorQuery(query_doc,
                                     extractor_usage_url,
