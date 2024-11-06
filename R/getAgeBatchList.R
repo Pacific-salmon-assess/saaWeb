@@ -2,6 +2,7 @@
 #'
 #' Retrieve header information on all age batches
 #'
+#' @param process_year Process year to retrieve batches (e.g. 2024 = Apr. 2024 to March 2025)
 #' @param config_file Configuration file
 #' @param user_name User name to execute the query as
 #' @param password Password of the user
@@ -16,7 +17,8 @@
 #' @examplesIf interactive()
 #' getAgeBatchList()
 #'
-getAgeBatchList <- function(config_file = "saaWeb.config",
+getAgeBatchList <- function(process_year,
+                            config_file = "saaWeb.config",
                             user_name = Sys.getenv("username"),
                             password = NULL) {
   config_list <- loadConfigFile(config_file)
@@ -30,7 +32,8 @@ getAgeBatchList <- function(config_file = "saaWeb.config",
     curl::handle_setheaders(Accept = "application/json, text/plain, */*")
 
 
-  query_response <- curl::curl_fetch_memory(config_list$AgeBatchList, web_conn)
+  age_batch_list_url <- urlPath(config_list$AgeBatchList, process_year)
+  query_response <- curl::curl_fetch_memory(age_batch_list_url, web_conn)
 
   if (query_response$status_code != HttpStatusOk) {
     stop("Error when retrieving query result: ", query_response$status_code)

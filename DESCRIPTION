@@ -1,7 +1,7 @@
 Package: saaWeb
 Type: Package
 Title: Salmon Assessment Analytics Web Services
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person(given = "Nicholas", family = "Komick", email = "nicholas.komick@dfo-mpo.gc.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8330-0863"))
   )
