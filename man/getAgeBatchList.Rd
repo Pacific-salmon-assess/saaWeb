@@ -5,12 +5,15 @@
 \title{Get Age Batch List}
 \usage{
 getAgeBatchList(
+  process_year,
   config_file = "saaWeb.config",
   user_name = Sys.getenv("username"),
   password = NULL
 )
 }
 \arguments{
+\item{process_year}{Process year to retrieve batches (e.g. 2024 = Apr. 2024 to March 2025)}
+
 \item{config_file}{Configuration file}
 
 \item{user_name}{User name to execute the query as}
