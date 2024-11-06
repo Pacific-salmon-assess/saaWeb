@@ -1,66 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/allInteger.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getAgeBatchDetails.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getAgeBatchList.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getAgeBatchScaleResults.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getCurrentYear.html</loc>
-  </url>
-  <url>
-    <loc>/reference/hasText.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/loadConfigFile.html</loc>
-  </url>
-  <url>
-    <loc>/reference/openSaaWebConnection.html</loc>
-  </url>
-  <url>
-    <loc>/reference/parseAgeScaleReads.html</loc>
-  </url>
-  <url>
-    <loc>/reference/parseExtractorResponse.html</loc>
-  </url>
-  <url>
-    <loc>/reference/runCwtExtractorQuery.html</loc>
-  </url>
-  <url>
-    <loc>/reference/runExtractorQuery.html</loc>
-  </url>
-  <url>
-    <loc>/reference/runNusedsExtractorQuery.html</loc>
-  </url>
-  <url>
-    <loc>/reference/urlPath.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/allInteger.html</loc></url>
+<url><loc>/reference/getAgeBatchDetails.html</loc></url>
+<url><loc>/reference/getAgeBatchList.html</loc></url>
+<url><loc>/reference/getAgeBatchScaleResults.html</loc></url>
+<url><loc>/reference/getCurrentYear.html</loc></url>
+<url><loc>/reference/hasText.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/loadConfigFile.html</loc></url>
+<url><loc>/reference/openSaaWebConnection.html</loc></url>
+<url><loc>/reference/parseAgeScaleReads.html</loc></url>
+<url><loc>/reference/parseExtractorResponse.html</loc></url>
+<url><loc>/reference/runCwtExtractorQuery.html</loc></url>
+<url><loc>/reference/runExtractorQuery.html</loc></url>
+<url><loc>/reference/runNusedsExtractorQuery.html</loc></url>
+<url><loc>/reference/urlPath.html</loc></url>
 </urlset>
+
