@@ -2,7 +2,6 @@
 #'
 #' Retrieve header information on all age batches from 2021 to Current Year
 #'
-#' @param process_year Process year to retrieve batches (e.g. 2024 = Apr. 2024 to March 2025)
 #' @param config_file Configuration file
 #' @param user_name User name to execute the query as
 #' @param password Password of the user
@@ -14,6 +13,7 @@
 #' @importFrom askpass askpass
 #' @importFrom curl new_handle curl_fetch_memory handle_setheaders
 #' @importFrom dplyr bind_rows
+#' @importFrom jsonlite fromJSON
 #'
 #' @examplesIf interactive()
 #' getAgeBatchList2021toCurrent()
@@ -60,6 +60,7 @@ getAgeBatchList2021toCurrent <- function(
       web_conn,
       age_batch_list_url
     )
-  query_response_df <- do.call(bind_rows, query_response_list)
+
+  query_response_df <- bind_rows(query_response_list)
   return(query_response_df)
 }

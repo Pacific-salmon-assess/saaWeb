@@ -16,8 +16,6 @@ getAgeBatchList2021toCurrent(
 \item{user_name}{User name to execute the query as}
 
 \item{password}{Password of the user}
-
-\item{process_year}{Process year to retrieve batches (e.g. 2024 = Apr. 2024 to March 2025)}
 }
 \value{
 Results of the Query
