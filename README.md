@@ -2,6 +2,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/Pacific-salmon-assess/saaWeb/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Pacific-salmon-assess/saaWeb/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/Pacific-salmon-assess/saaWeb/graph/badge.svg)](https://app.codecov.io/gh/Pacific-salmon-assess/saaWeb)
 <!-- badges: end -->
 
 
