@@ -1,8 +1,9 @@
 # Salmon Assessment Analytics Web
 
-  <!-- badges: start -->
-  [![R-CMD-check](https://github.com/Pacific-salmon-assess/saaWeb/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Pacific-salmon-assess/saaWeb/actions/workflows/R-CMD-check.yaml)
-  <!-- badges: end -->
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/Pacific-salmon-assess/saaWeb/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Pacific-salmon-assess/saaWeb/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 
 ## Installation
 
