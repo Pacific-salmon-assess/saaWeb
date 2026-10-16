@@ -1,7 +1,7 @@
 Package: saaWeb
 Type: Package
 Title: Salmon Assessment Analytics Web Services
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: c(
     person(given = "Nicholas", family = "Komick", email = "nicholas.komick@dfo-mpo.gc.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8330-0863"))
   )
@@ -16,4 +16,4 @@ Imports:
     jsonlite,
     yaml,
     dplyr
-RoxygenNote: 7.3.2
+Config/roxygen2/version: 8.1.0

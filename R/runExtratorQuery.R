@@ -14,28 +14,29 @@ parseExtractorResponse <- function(query_response) {
   }
 
   query_json <- jsonlite::fromJSON(query_response, simplifyVector = FALSE)
-  data_col_names <- unlist(query_json$Names)
+  col_names  <- unlist(query_json$Names)
+  col_types  <- unlist(query_json$Types)
+  rows       <- query_json$Rows
 
-  extractor_data <-
-    lapply(
-      query_json$Rows,
-      function(.) {
-        df <- as.data.frame(.$Cells)
-        colnames(df) <- data_col_names
-        return(df)
-      }
-    )
+  # One list per row -> one matrix-like pass per column
+  cells <- lapply(rows, `[[`, "Cells")
 
-  df <- do.call(rbind, extractor_data)
-  col_types <- unlist(query_json$Types)
+  df <- lapply(seq_along(col_names), function(i) {
+    col <- lapply(cells, `[[`, i)
+    col[vapply(col, is.null, logical(1))] <- NA   # NULL -> NA so unlist keeps length
+    col <- unlist(col, use.names = FALSE)
 
-  int_col <- data_col_names[grepl("^int", col_types, ignore.case = TRUE)]
-  df[, int_col] <- lapply(df[, int_col], as.integer)
+    type <- tolower(col_types[i])
+    if (grepl("^int", type)) {
+      col <- as.integer(col)
+    } else if (type %in% c("single", "double", "decimal")) {
+      col <- as.double(col)
+    }
+    col
+  })
 
-  dbl_col <- data_col_names[grepl("^(single|double|decimal)$", col_types, ignore.case = TRUE)]
-  df[, dbl_col] <- lapply(df[, dbl_col], as.double)
-
-  return(df)
+  names(df) <- col_names
+  list2DF(df)
 }
 
 #' Run Extractor Query

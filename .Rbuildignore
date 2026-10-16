@@ -3,3 +3,5 @@
 saaWeb.config
 ^LICENSE\.md$
 ^\.github$
+^\.positai$
+^\.claude$

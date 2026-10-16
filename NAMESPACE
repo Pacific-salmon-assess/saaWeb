@@ -11,9 +11,11 @@ export(runCwtExtractorQuery)
 export(runExtractorQuery)
 export(runNusedsExtractorQuery)
 importFrom(askpass,askpass)
-importFrom(curl,curl_fetch_memory)
-importFrom(curl,handle_setheaders)
-importFrom(curl,new_handle)
+importFrom(curl,
+  curl_fetch_memory,
+  handle_setheaders,
+  new_handle
+)
 importFrom(dplyr,bind_rows)
 importFrom(jsonlite,fromJSON)
 importFrom(yaml,read_yaml)

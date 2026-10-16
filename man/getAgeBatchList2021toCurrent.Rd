@@ -24,7 +24,7 @@ Results of the Query
 Retrieve header information on all age batches from 2021 to Current Year
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 getAgeBatchList2021toCurrent()
 \dontshow{\}) # examplesIf}
 }

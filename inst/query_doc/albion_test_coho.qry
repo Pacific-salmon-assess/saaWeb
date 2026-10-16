@@ -1,0 +1,52 @@
+{
+  "Id": 0,
+  "DataSource": "AGE_READINGS_MV",
+  "Schema": "NUSEDS_RPT",
+  "Fields": [
+    "ACT_ID",
+    "ACT_ACT_ID",
+    "ECO_CDE",
+    "PAC_CDE",
+    "AGE_GR",
+    "AGE_EU",
+    "AGE_UOM",
+    "AGE",
+    "SCALE_CONTAINER_ADDR",
+    "READING_METHOD",
+    "MTP_ID",
+    "FORMAT",
+    "PRJ_ID",
+    "PROJECT",
+    "GFE_ID",
+    "LOCATION",
+    "FISCAL_YEAR",
+    "SAMPLE_#",
+    "SBJ_ID",
+    "SPECIES",
+    "ACY_ID",
+    "SAMPLE_SOURCE",
+    "GCO_CDE",
+    "GEAR",
+    "LIFE_HISTORY_STAGE",
+    "SAMPLE_START_DT",
+    "SAMPLE_END_DT",
+    "CONTAINER_LABEL"
+  ],
+  "Filters": [
+    {
+      "Column": "PRJ_ID",
+      "Value": "8134007"
+    },
+    {
+      "Column": "SBJ_ID",
+      "Value": "2"
+    }
+  ],
+  "Orders": [
+    {
+      "Column": "PROJECT",
+      "Value": "asc"
+    }
+  ],
+  "Aggregates": []
+}

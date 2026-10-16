@@ -1,3 +1,7 @@
+# saaWeb 1.2.0
+
+* Rewrite response parser to be much quicker for large data sets
+
 # saaWeb 1.1.0
 
 * Added `getAgeBatchList2021toCurrent(...)` function to provide recent age batch list
